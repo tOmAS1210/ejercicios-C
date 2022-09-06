@@ -1,0 +1,40 @@
+18:36:44 **** Incremental Build of configuration Debug for project ejercicio 5-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio 5-1.o" "..\\src\\ejercicio 5-1.c" 
+..\src\ejercicio 5-1.c: In function 'main':
+..\src\ejercicio 5-1.c:87:13: warning: passing argument 2 of 'inicializarArrays' makes pointer from integer without a cast [-Wint-conversion]
+   87 | #define TAM 2
+      |             ^
+      |             |
+      |             int
+..\src\ejercicio 5-1.c:106:41: note: in expansion of macro 'TAM'
+  106 |  retorno = inicializarArrays(listaEdad, TAM);
+      |                                         ^~~
+..\src\ejercicio 5-1.c:88:46: note: expected 'int *' but argument is of type 'int'
+   88 | int inicializarArrays(int arrayEdades[], int cantidadElementos[]);
+      |                                          ~~~~^~~~~~~~~~~~~~~~~~~
+..\src\ejercicio 5-1.c:87:13: warning: passing argument 2 of 'inicializarArrays' makes pointer from integer without a cast [-Wint-conversion]
+   87 | #define TAM 2
+      |             ^
+      |             |
+      |             int
+..\src\ejercicio 5-1.c:107:45: note: in expansion of macro 'TAM'
+  107 |  retorno1 = inicializarArrays(listaSalario, TAM);
+      |                                             ^~~
+..\src\ejercicio 5-1.c:88:46: note: expected 'int *' but argument is of type 'int'
+   88 | int inicializarArrays(int arrayEdades[], int cantidadElementos[]);
+      |                                          ~~~~^~~~~~~~~~~~~~~~~~~
+..\src\ejercicio 5-1.c:133:69: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat=]
+  133 |      printf("\n para el legajo %d, la edad es %d y el salario es %.2f: ", i, listaEdad[i], listaSalario[i]);
+      |                                                                  ~~~^                      ~~~~~~~~~~~~~~~
+      |                                                                     |                                  |
+      |                                                                     double                             int
+      |                                                                  %.2d
+..\src\ejercicio 5-1.c: In function 'inicializarArrays':
+..\src\ejercicio 5-1.c:153:12: warning: comparison between pointer and integer
+  153 |   for(i=0;i<cantidadElementos;i++){
+      |            ^
+gcc -o "ejercicio 5-1.exe" "src\\ejercicio 5-1.o" 
+
+18:36:44 Build Finished. 0 errors, 4 warnings. (took 389ms)
+

@@ -1,0 +1,83 @@
+/*
+ ============================================================================
+ Name        : Menu.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int elegir;
+	int bandera2;
+	int bandera3;
+	char confirmar;
+
+	bandera2 = 0;
+	bandera3 = 0;
+
+
+	do{
+		printf("\ningrese una opción"
+				"1) iniciar\n"
+				"2) procesar\n"
+				"3) finalizar\n"
+				"4) salir\n");//hola
+		scanf("%d", &elegir);
+
+		switch(elegir)
+		{
+		case 1:
+			printf("el programa se inició");
+			bandera2 = 1;
+			bandera3 = 1;
+			break;
+		case 2:
+			if(bandera2==0)
+			{
+				printf("no inicio el programa");
+			}
+			else
+			{
+				printf("procesando");
+				bandera3 += 2;
+			}
+			break;
+		case 3:
+			if(bandera3==3)
+			{
+				printf("finalizando");
+			}
+			else
+			{
+				if(bandera3==1)
+				{
+					printf("se inició pero no se procesó");
+				}
+				else
+				{
+					printf("no se inició");
+				}
+			}
+			break;
+
+
+
+
+		}
+
+		printf("\ndesea volver a iniciar) s/n");
+		fflush(stdin);
+		scanf("%c", &confirmar);
+	}while(confirmar=='s');
+
+
+
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,33 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float pedir(float numero);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+
+	pedir(numero);
+	printf("el numero ingresado es: %.2f", numero);
+
+	return EXIT_SUCCESS;
+}
+
+float pedir(float numero)
+{
+	float numero;
+	printf("ingrese un numero con decimal: ");
+	scanf("%f", &numero);
+
+	return numero;
+}

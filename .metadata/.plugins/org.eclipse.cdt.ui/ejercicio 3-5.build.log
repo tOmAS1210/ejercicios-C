@@ -1,0 +1,11 @@
+23:35:44 **** Incremental Build of configuration Debug for project ejercicio 3-5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio 3-5.o" "..\\src\\ejercicio 3-5.c" 
+..\src\ejercicio 3-5.c: In function 'main':
+..\src\ejercicio 3-5.c:31:2: warning: 'resultado' is used uninitialized in this function [-Wuninitialized]
+   31 |  printf("la resta da: %d", resultado);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "ejercicio 3-5.exe" "src\\ejercicio 3-5.o" 
+
+23:35:45 Build Finished. 0 errors, 1 warnings. (took 397ms)
+

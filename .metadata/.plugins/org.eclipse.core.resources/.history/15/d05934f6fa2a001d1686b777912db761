@@ -1,0 +1,54 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 1 sep. 2022
+ *      Author: USER
+ */
+
+float pedir()
+{
+	float numero;
+
+	do{
+	printf("ingrese un numero con decimal entre el 200 y 350: ");
+	scanf("%f", &numero);
+	}while(numero<200 || numero>350);
+
+	return numero;
+}
+
+void mostrarNumero(float numero)
+{
+	printf("el numero con decimal ingresado es: %.2f", numero);
+}
+
+int comprobarPar(int numero)
+{
+	if(numero%2==0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+int asignar(float num)
+{
+	do{
+	printf("ingrese un valor entre 10 y 100: ");
+	scanf("%d", &num);
+	}while(num<10 || num>100);//s
+
+	return num;
+}
+
+int realizarDescuento(float numero)
+{
+	float descuento;
+	descuento = (numero*0.95);//descuento del 5%
+
+	return descuento;
+}
+

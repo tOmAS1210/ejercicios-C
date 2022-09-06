@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int comprobar();
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	printf("el numero ingresado: %")
+
+	return EXIT_SUCCESS;
+}
+
+int comprobar()
+{
+	int numero;
+
+	if(numero % 2 == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}

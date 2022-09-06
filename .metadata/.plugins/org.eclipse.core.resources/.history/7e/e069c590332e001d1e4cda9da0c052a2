@@ -1,0 +1,69 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void temperaturaEnCelsius(float* tempCelsius);
+void temperaturaEnFahrenheit(float* tempFahrenheit);
+
+float temperaturaCelsiusPasandoFahrenheit(float celsius);
+float temperaturaFahrenheitPasandoCelsius(float fahrenheit);
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	float valorCelsius;
+	float valorFahtenheit;
+
+	temperaturaEnCelsius(&valorCelsius);
+	temperaturaEnFahrenheit(&tempFahrenheit);
+
+	printf("la temperatura ingresada en grados Celcius es: %.2f", valorCelsius);
+
+
+	return EXIT_SUCCESS;
+}
+
+void temperaturaEnCelsius(float* tempCelsius)
+{
+	float valorCelsius;
+
+	do
+	{
+		printf("ingrese una temperatura en Celsius entre 0ºC y 100ºC celsius: ");
+		scanf("%f", &valorCelsius);
+		*tempCelsius = valorCelsius;
+	}while(valorCelsius<0 || valorCelsius>100);
+}
+
+void temperaturaEnFahrenheit(float* tempFahrenheit)
+{
+	float valorFahrenheit;
+
+	do{
+		printf("ingrese una temperatura en fahrenheit entre 32ºF y 212ºF Fahrenheit: ");
+		scanf("%f", &valorFahrenheit);
+		*tempFahrenheit = valorFahrenheit;
+	}while(valorFahrenheit>212 || valorFahrenheit<32);
+}
+
+
+
+
+/*float temperaturaCelsiusPasandoFahrenheit(float celsius)
+{
+	float respuesta;
+
+	respuesta = (celsius*9/5) + 32;
+	return 0;
+}*/
+

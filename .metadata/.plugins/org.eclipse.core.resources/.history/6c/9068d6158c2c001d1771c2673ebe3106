@@ -1,0 +1,47 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int suma(int num1,int num2);
+
+int main(void) {
+
+	int num1;
+	int num2;
+
+	printf("ingrese un numero: ");
+	scanf("%d", num1);
+
+	printf("ingrese otro numero: ");
+	scanf("%d", num2);
+
+	suma(num1, num2);
+
+
+	return EXIT_SUCCESS;
+}
+
+int suma(int num1,int num2)
+{
+	int puntero;
+
+	puntero = num1+num2;
+
+	if(puntero>0 || puntero<1)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}

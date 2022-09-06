@@ -1,0 +1,83 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void temperaturaEnCelsius(float* tempCelsius);
+void temperaturaEnFahrenheit(float* tempFahrenheit);
+
+void temperaturaCelsiusPasandoFahrenheit(float* celsius);
+void temperaturaFahrenheitPasandoCelsius(float* fahrenheit);
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	float valorCelsius;
+	float valorFahrenheit;
+	float celiusFahrenheit;
+	float fahrenheitCelsius;
+
+	temperaturaEnCelsius(&valorCelsius);
+	temperaturaEnFahrenheit(&valorFahrenheit);
+	temperaturaCelsiusPasandoFahrenheit(&celiusFahrenheit);
+
+	printf("\nla temperatura ingresada en grados Celcius es: %.2f", valorCelsius);
+	printf("\nla temperatura ingresada en grados Fahrenheit es: %.2f", valorFahrenheit);
+	printf("\nla temperatura ingresada en C, fue pasada a F y su temperatura en F es: %.2f", celciusFahrenheit);
+
+	return EXIT_SUCCESS;
+}
+
+void temperaturaEnCelsius(float* tempCelsius)
+{
+	float valorCelsius;
+
+	do
+	{
+		printf("ingrese una temperatura en Celsius entre 0ºC y 100ºC celsius: ");
+		scanf("%f", &valorCelsius);
+		*tempCelsius = valorCelsius;
+	}while(valorCelsius<0 || valorCelsius>100);
+}
+
+void temperaturaEnFahrenheit(float* tempFahrenheit)
+{
+	float valorFahrenheit;
+
+	do{
+		printf("ingrese una temperatura en fahrenheit entre 32ºF y 212ºF Fahrenheit: ");
+		scanf("%f", &valorFahrenheit);
+		*tempFahrenheit = valorFahrenheit;
+	}while(valorFahrenheit>212 || valorFahrenheit<32);
+}
+
+
+void temperaturaCelsiusPasandoFahrenheit(float* celciusFahrenheit)
+{
+	float pasoDeCelsiusFarhenheit;
+
+	printf("ingrese una temperatura en Celsius para pasar a Fahrenheit: ");
+	scanf("%f", &pasoDeCelsiusFarhenheit);
+
+	*celciusFahrenheit = (pasoDeCelsiusFarhenheit*9/5) + 32;
+}
+
+void temperaturaFahrenheitPasandoCelsius(float* fahrenheit)
+{
+	float pasoDeFahrenheitCelsius;
+
+	printf("ingrese una temperatura en Fahrenheit para pasar a Celsius: ");
+	scanf("%f", &pasoDeFahrenheitCelsius);
+
+	*fahrenheit = (pasoDeFahrenheitCelsius-32)*5/9;
+}
+

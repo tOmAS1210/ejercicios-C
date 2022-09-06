@@ -1,0 +1,53 @@
+20:01:24 **** Incremental Build of configuration Debug for project ejercicio 4-3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones.o" "..\\src\\funciones.c" 
+..\src\funciones.c: In function 'temperaturaEnCelsius':
+..\src\funciones.c:15:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   15 |   printf("ingrese una temperatura en Celsius entre 0ºC y 100ºC celsius: ");
+      |   ^~~~~~
+..\src\funciones.c:15:3: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\funciones.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /*
+..\src\funciones.c:16:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   16 |   scanf("%f", &valorCelsius);
+      |   ^~~~~
+..\src\funciones.c:16:3: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\funciones.c:16:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\funciones.c: In function 'temperaturaEnFahrenheit':
+..\src\funciones.c:26:3: warning: incompatible implicit declaration of built-in function 'printf'
+   26 |   printf("ingrese una temperatura en fahrenheit entre 32ºF y 212ºF Fahrenheit: ");
+      |   ^~~~~~
+..\src\funciones.c:26:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\funciones.c:27:3: warning: incompatible implicit declaration of built-in function 'scanf'
+   27 |   scanf("%f", &valorFahrenheit);
+      |   ^~~~~
+..\src\funciones.c:27:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones2.o" "..\\src\\funciones2.c" 
+..\src\funciones2.c: In function 'temperaturaCelsiusPasandoFahrenheit':
+..\src\funciones2.c:12:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   12 |  printf("ingrese una temperatura en Celsius para pasar a Fahrenheit: ");
+      |  ^~~~~~
+..\src\funciones2.c:12:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\funciones2.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /*
+..\src\funciones2.c:13:2: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   13 |  scanf("%f", &pasoDeCelsiusFarhenheit);
+      |  ^~~~~
+..\src\funciones2.c:13:2: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\funciones2.c:13:2: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\funciones2.c: In function 'temperaturaFahrenheitPasandoCelsius':
+..\src\funciones2.c:22:2: warning: incompatible implicit declaration of built-in function 'printf'
+   22 |  printf("ingrese una temperatura en Fahrenheit para pasar a Celsius: ");
+      |  ^~~~~~
+..\src\funciones2.c:22:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\funciones2.c:23:2: warning: incompatible implicit declaration of built-in function 'scanf'
+   23 |  scanf("%f", &pasoDeFahrenheitCelsius);
+      |  ^~~~~
+..\src\funciones2.c:23:2: note: include '<stdio.h>' or provide a declaration of 'scanf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio 4-3.o" "..\\src\\ejercicio 4-3.c" 
+gcc -o "ejercicio 4-3.exe" "src\\ejercicio 4-3.o" "src\\funciones.o" "src\\funciones2.o" 
+
+20:01:26 Build Finished. 0 errors, 12 warnings. (took 1s.217ms)
+

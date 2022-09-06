@@ -1,0 +1,46 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+int asignar(int num);
+int realizarDescuento(int numero);
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroPedido;
+	int num;
+
+	//numeroPedido = realizarDescuento(asignar(num));
+
+	printf("el numero pedido es: %d", numeroPedido);
+
+	return EXIT_SUCCESS;
+}
+
+int asignar(int num)
+{
+	do{
+	printf("ingrese un valor entre 10 y 100: ");
+	scanf("%d", &num);
+	}while(num<10 || num>100);//s
+
+	return num;
+}
+
+int realizarDescuento(int numero)
+{
+	int descuento;
+	descuento = (numero*0.05);//descuento del 5%
+
+	return descuento;
+}

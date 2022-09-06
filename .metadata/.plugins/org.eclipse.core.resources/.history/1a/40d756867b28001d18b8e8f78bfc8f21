@@ -1,0 +1,155 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+			int numeroDeLegajo;
+			char estadoCivil;
+			int edad;
+			int epocaIngresado;
+			char genero;
+			char respuesta;
+			int cantidadAncianos;
+			int banderaLegajoMujer;
+			int legajoMujerAntigua;
+			int edadMujerAntigua;
+			int epocaDeIngresoMinimo;
+			int precioPorLibreta;
+			int totalPrecioLibretas;
+			int cantidadLibretas;
+			int descuentoLibretas;
+
+			cantidadAncianos = 0;
+			banderaLegajoMujer = 0;
+			totalPrecioLibretas = 0;
+			precioPorLibreta = 450;
+			cantidadLibretas = 0;
+
+			do{
+
+				do{
+				printf("ingrese su numero de legajo(4 cifras sin ceros a la derecha): ");
+				scanf("%d", &numeroDeLegajo);
+				}while(numeroDeLegajo<1000 || numeroDeLegajo>9999);
+
+				do{
+				printf("ingrese su estado civil(soltero 's'/casado 'c'/viudo 'v'): ");
+				fflush(stdin);
+				scanf("%c", &estadoCivil);
+				}while(estadoCivil!='s' && estadoCivil!='c' && estadoCivil!='v');
+
+				do{
+				printf("ingrese su edad mayor a 17 años: ");
+				scanf("%d", &edad);
+				}while(edad<18);
+
+				do{
+					printf("ingrese su año de ingreso: ");
+					scanf("%d", &epocaIngresado);
+				}while(epocaIngresado>2022 || epocaIngresado<1945);
+
+				do{
+					printf("ingrese su genero: masculino 'm'/ femenino 'f'/ binario 'o': ");
+					fflush(stdin);
+					scanf("%c", &genero);
+				}while(genero!='f' && genero!='m' && genero!='o');
+
+				if(edad>60)
+				{
+					cantidadAncianos++;
+				}
+
+
+				if(epocaIngresado<epocaDeIngresoMinimo || banderaLegajoMujer==0)
+				{
+					if(genero == 'f')
+					{
+					epocaDeIngresoMinimo = epocaIngresado;
+					legajoMujerAntigua = numeroDeLegajo;
+					edadMujerAntigua = edad;
+					banderaLegajoMujer=1;
+					}
+				}
+
+				totalPrecioLibretas += precioPorLibreta;
+
+				cantidadLibretas++;
+
+				if(cantidadLibretas>10)
+				{
+					descuentoLibretas = (totalPrecioLibretas*10)/100;
+					descuentoLibretas = totalPrecioLibretas-descuentoLibretas;
+				}
+				else
+				{
+					if(cantidadLibretas>5)
+					{
+						descuentoLibretas = (totalPrecioLibretas*5)/100;
+						descuentoLibretas = totalPrecioLibretas-descuentoLibretas;
+					}
+				}
+
+				if(edad>60)
+				{
+					descuentoLibretas = (totalPrecioLibretas*25)/100;
+					descuentoLibretas = totalPrecioLibretas-descuentoLibretas;
+				}
+
+				printf("desea seguir ingresando datos? s/n ");
+				fflush(stdin);
+				scanf("%c", &respuesta);
+			}while(respuesta=='s');
+
+			printf("la cantidad de ancianos mayores a 60 años es de: %d", cantidadAncianos);
+			printf("\nel legajo de la mujer que ingreso hace mas tiempo es: %d y su edad es: %d", legajoMujerAntigua, edadMujerAntigua);
+			printf("\nel total a pagar de las libretas sin descuento es de: %d", totalPrecioLibretas);
+			if(cantidadLibretas>10)
+			{
+			printf("\nel total a pagar con descuento de 10 porciento es de: %d", descuentoLibretas);
+			}
+			else
+			{
+				if(cantidadLibretas>5)
+				{
+					printf("\nel total a pagar con descuento de 5 porciento es de: %d", descuentoLibretas);
+				}
+			}
+			if(edad>60)
+			{
+			printf("\nel total a pagar de las libretas para los mayores a 60 años es de: %d", descuentoLibretas);
+			}
+
+		/*char letras;
+		int i;
+		int cantidadLetrasEme;
+
+		cantidadLetrasEme = 0;
+
+		for(i=0; i<5;i++)
+		{
+			printf("ingresa un caracter: ");
+			fflush(stdin);
+			scanf("%c", &letras);
+
+			if(letras=='m')
+			{
+				cantidadLetrasEme++;
+			}
+		}
+
+		printf("la cantidad de letras M ingresadas es de: %d", cantidadLetrasEme);*/
+
+	return EXIT_SUCCESS;
+}

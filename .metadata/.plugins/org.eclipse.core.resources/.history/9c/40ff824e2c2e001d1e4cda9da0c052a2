@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int temperaturaCelsius(int celsius);
+int temperaturaFahrenheit(iny fahrenheit):;
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

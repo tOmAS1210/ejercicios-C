@@ -1,0 +1,21 @@
+23:27:00 **** Incremental Build of configuration Debug for project ejercicio 3-55 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio 3-55.o" "..\\src\\ejercicio 3-55.c" 
+..\src\ejercicio 3-55.c: In function 'main':
+..\src\ejercicio 3-55.c:28:14: warning: implicit declaration of function 'restar2'; did you mean 'restar3'? [-Wimplicit-function-declaration]
+   28 |  resultado = restar2(numero1,numero2);
+      |              ^~~~~~~
+      |              restar3
+..\src\ejercicio 3-55.c: In function 'restar3':
+..\src\ejercicio 3-55.c:61:14: error: parameter name omitted
+   61 | void restar3(int, int)
+      |              ^~~
+..\src\ejercicio 3-55.c:61:19: error: parameter name omitted
+   61 | void restar3(int, int)
+      |                   ^~~
+..\src\ejercicio 3-55.c:65:6: warning: variable 'resultado' set but not used [-Wunused-but-set-variable]
+   65 |  int resultado;
+      |      ^~~~~~~~~
+
+23:27:00 Build Failed. 2 errors, 2 warnings. (took 147ms)
+

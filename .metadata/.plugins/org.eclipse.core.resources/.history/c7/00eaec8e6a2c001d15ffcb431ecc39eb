@@ -1,0 +1,108 @@
+/*
+ ============================================================================
+ Name        : Menu.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int elegir;
+	int bandera2;
+	int bandera3;
+	int bandera4;
+	char confirmar;
+
+	bandera2 = 0;
+	bandera3 = 0;
+	bandera4 = 0;
+	confirmar = 'n';
+
+	do{
+		printf("1) iniciar\n"
+				"2) procesar\n"
+				"3) finalizar\n"
+				"4) salir\n");//hola
+		printf("\ningrese una opción: ");
+		scanf("%d", &elegir);
+
+		switch(elegir)
+		{
+		case 1:
+			printf("el programa se inició");
+			bandera2 = 1;
+			bandera3 = 1;
+			bandera4 = 1;
+			break;
+		case 2:
+			if(bandera2==0)
+			{
+				printf("no inicio el programa");
+			}
+			else
+			{
+				printf("procesando");
+				bandera3 += 2;
+				bandera4 += 1;
+			}
+			break;
+		case 3:
+			if(bandera3==3)
+			{
+				printf("finalizando");
+				bandera4 += 1;
+			}
+			else
+			{
+				if(bandera3==1)
+				{
+					printf("se inició pero no se procesó");
+				}
+				else
+				{
+					printf("no se inició");
+				}
+			}
+			break;
+		case 4:
+			if(bandera4==3)
+			{
+				printf("saliendo");
+			}
+			else
+			{
+				if(bandera4==2)
+				{
+					printf("se inicio y proceso, pero no se finalizó");
+				}
+				else if(bandera4==1)
+				{
+					printf("se inicio, pero no se proceso y finalizó");
+				}
+				else
+				{
+					printf("no se inició");
+				}
+			}
+
+
+
+
+		}
+
+		printf("\ndesea salir? ingrese 4, sino ingrese cualquier letra");
+		//fflush(stdin);
+		scanf("%d", &elegir);
+	}while(elegir!=4);
+
+
+
+	return EXIT_SUCCESS;
+}

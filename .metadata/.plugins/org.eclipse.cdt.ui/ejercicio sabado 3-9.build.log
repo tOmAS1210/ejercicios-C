@@ -1,0 +1,7 @@
+12:51:24 **** Rebuild of configuration Debug for project ejercicio sabado 3-9 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio sabado 3-9.o" "..\\src\\ejercicio sabado 3-9.c" 
+gcc -o "ejercicio sabado 3-9.exe" "src\\ejercicio sabado 3-9.o" 
+
+12:51:28 Build Finished. 0 errors, 0 warnings. (took 4s.92ms)
+

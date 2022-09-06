@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numero = 1;
+	int i;
+
+	numero = pedir(numero);
+
+	for(i=numero; i<numero;i--)
+	{
+		numero *= i;
+	}
+
+	printf("\nel valor del factorial del numero ingresado es: %d", numero);
+
+	return EXIT_SUCCESS;
+}

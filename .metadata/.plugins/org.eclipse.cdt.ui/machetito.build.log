@@ -1,0 +1,186 @@
+09:41:43 **** Rebuild of configuration Debug for project machetito ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\machetito.o" "..\\src\\machetito.c" 
+..\src\machetito.c:2:2: error: expected identifier or '(' before 'do'
+    2 |  do{
+      |  ^~
+..\src\machetito.c:5:6: error: expected identifier or '(' before 'while'
+    5 |     }while(variable  != "x" && variable != "xx" && variable != "x" );
+      |      ^~~~~
+..\src\machetito.c:7:5: error: expected identifier or '(' before 'do'
+    7 |     do{
+      |     ^~
+..\src\machetito.c:10:6: error: expected identifier or '(' before 'while'
+   10 |     }while(isNaN(variable) || variable < 1 || variable > 8);
+      |      ^~~~~
+..\src\machetito.c:13:5: error: expected identifier or '(' before 'for'
+   13 |     for (i = 0 ; i < 22;  i++){
+      |     ^~~
+..\src\machetito.c:13:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   13 |     for (i = 0 ; i < 22;  i++){
+      |                    ^
+..\src\machetito.c:13:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   13 |     for (i = 0 ; i < 22;  i++){
+      |                            ^~
+..\src\machetito.c:21:2: error: expected identifier or '(' before 'for'
+   21 |  for(i = 2; i < numero;i++)
+      |  ^~~
+..\src\machetito.c:21:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   21 |  for(i = 2; i < numero;i++)
+      |               ^
+..\src\machetito.c:21:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   21 |  for(i = 2; i < numero;i++)
+      |                         ^~
+..\src\machetito.c:29:2: error: expected identifier or '(' before 'if'
+   29 |  if(bandera == 0){
+      |  ^~
+..\src\machetito.c:35:3: error: expected identifier or '(' before 'if'
+   35 |   if(banderaDelPrimero ==  0){
+      |   ^~
+..\src\machetito.c:40:3: error: expected identifier or '(' before 'else'
+   40 |   else{
+      |   ^~~~
+..\src\machetito.c:51:2: error: expected identifier or '(' before 'switch'
+   51 |  switch(X){
+      |  ^~~~~~
+..\src\machetito.c:71:1: error: unknown type name 'function'; did you mean 'union'?
+   71 | function mostrar()
+      | ^~~~~~~~
+      | union
+..\src\machetito.c: In function 'mostrar':
+..\src\machetito.c:73:2: error: unknown type name 'let'
+   73 |  let tipoProducto;
+      |  ^~~
+..\src\machetito.c:74:2: error: unknown type name 'let'
+   74 |  let cantidadBolsas;
+      |  ^~~
+..\src\machetito.c:75:2: error: unknown type name 'let'
+   75 |  let PrecioPorBolsa;
+      |  ^~~
+..\src\machetito.c:76:2: error: unknown type name 'let'
+   76 |  let respuesta;
+      |  ^~~
+..\src\machetito.c:77:2: error: unknown type name 'let'
+   77 |  let descuento;
+      |  ^~~
+..\src\machetito.c:78:2: error: unknown type name 'let'
+   78 |  let precioTotal;
+      |  ^~~
+..\src\machetito.c:79:2: error: unknown type name 'let'
+   79 |  let importeSinDescuento;
+      |  ^~~
+..\src\machetito.c:80:2: error: unknown type name 'let'
+   80 |  let importeConDescuento;
+      |  ^~~
+..\src\machetito.c:81:2: error: unknown type name 'let'
+   81 |  let acumuladorPrecioTotal;
+      |  ^~~
+..\src\machetito.c:82:2: error: unknown type name 'let'
+   82 |  let banderaCantidadDebolsas;
+      |  ^~~
+..\src\machetito.c:83:2: error: unknown type name 'let'
+   83 |  let tipoMayorCantidadBolsas;
+      |  ^~~
+..\src\machetito.c:84:2: error: unknown type name 'let'
+   84 |  let cantidadDeBolsasMayor;
+      |  ^~~
+..\src\machetito.c:85:2: error: unknown type name 'let'
+   85 |  let tipoMasCaro;
+      |  ^~~
+..\src\machetito.c:86:2: error: unknown type name 'let'
+   86 |  let precioTipoMasCaro;
+      |  ^~~
+..\src\machetito.c:87:2: error: unknown type name 'let'
+   87 |  let banderaTipoCaro;
+      |  ^~~
+..\src\machetito.c:88:2: error: unknown type name 'let'
+   88 |  let acumuladorDeBolsas;
+      |  ^~~
+..\src\machetito.c:94:12: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   94 |  respuesta = "si";
+      |            ^
+..\src\machetito.c:96:18: warning: comparison between pointer and integer
+   96 |  while(respuesta == "si")
+      |                  ^~
+..\src\machetito.c:96:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\machetito.c:98:18: warning: implicit declaration of function 'prompt' [-Wimplicit-function-declaration]
+   98 |   tipoProducto = prompt("Ingrese el tipo de Producto");
+      |                  ^~~~~~
+..\src\machetito.c:99:30: error: request for member 'toLowerCase' in something not a structure or union
+   99 |   tipoProducto = tipoProducto.toLowerCase();
+      |                              ^
+..\src\machetito.c:100:22: warning: comparison between pointer and integer
+  100 |   while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
+      |                      ^~
+..\src\machetito.c:100:22: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\machetito.c:100:47: warning: comparison between pointer and integer
+  100 |   while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
+      |                                               ^~
+..\src\machetito.c:100:47: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\machetito.c:100:74: warning: comparison between pointer and integer
+  100 |   while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
+      |                                                                          ^~
+..\src\machetito.c:100:74: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\machetito.c:103:31: error: request for member 'toLowerCase' in something not a structure or union
+  103 |    tipoProducto = tipoProducto.toLowerCase();
+      |                               ^
+..\src\machetito.c:107:20: warning: implicit declaration of function 'parseInt' [-Wimplicit-function-declaration]
+  107 |   cantidadBolsas = parseInt(cantidadBolsas);
+      |                    ^~~~~~~~
+..\src\machetito.c:108:9: warning: implicit declaration of function 'isNaN' [-Wimplicit-function-declaration]
+  108 |   while(isNaN(cantidadBolsas))
+      |         ^~~~~
+..\src\machetito.c:168:24: error: request for member 'toLowerCase' in something not a structure or union
+  168 |   respuesta = respuesta.toLowerCase();
+      |                        ^
+..\src\machetito.c:175:2: error: 'document' undeclared (first use in this function)
+  175 |  document.write("<br> El importe sin descuento es " + importeSinDescuento);
+      |  ^~~~~~~~
+..\src\machetito.c:175:2: note: each undeclared identifier is reported only once for each function it appears in
+..\src\machetito.c: At top level:
+..\src\machetito.c:189:1: error: unknown type name 'function'; did you mean 'union'?
+  189 | function NumerosPrimos()
+      | ^~~~~~~~
+      | union
+..\src\machetito.c: In function 'NumerosPrimos':
+..\src\machetito.c:191:5: error: unknown type name 'let'
+  191 |     let numero;
+      |     ^~~
+..\src\machetito.c:192:5: error: unknown type name 'let'
+  192 |     let i;
+      |     ^~~
+..\src\machetito.c:193:5: error: unknown type name 'let'
+  193 |     let j;
+      |     ^~~
+..\src\machetito.c:194:5: error: unknown type name 'let'
+  194 |     let primos;
+      |     ^~~
+..\src\machetito.c:195:5: error: unknown type name 'let'
+  195 |     let cont;
+      |     ^~~
+..\src\machetito.c:196:15: error: expected ';' before 'numero'
+  196 |     primos = 0
+      |               ^
+      |               ;
+  197 |     numero = parseInt(document.getElementById("txtIdNumero").value);
+      |     ~~~~~~     
+..\src\machetito.c:210:21: error: expected ';' before '}' token
+  210 |             primos++
+      |                     ^
+      |                     ;
+  211 |         }
+      |         ~            
+..\src\machetito.c:213:5: error: 'document' undeclared (first use in this function)
+  213 |     document.write("la cantidad de números Primos es: " + primos);
+      |     ^~~~~~~~
+..\src\machetito.c: In function 'mostrar':
+..\src\machetito.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+..\src\machetito.c: In function 'NumerosPrimos':
+..\src\machetito.c:214:1: warning: control reaches end of non-void function [-Wreturn-type]
+  214 | }
+      | ^
+
+09:41:43 Build Failed. 44 errors, 14 warnings. (took 206ms)
+

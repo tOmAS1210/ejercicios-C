@@ -1,0 +1,17 @@
+/*
+ * utn.h
+ *
+ *  Created on: 4 sep. 2022
+ *      Author: USER
+ */
+
+#ifndef UTN_H_
+#define UTN_H_
+
+void temperaturaEnCelsius(float* tempCelsius);
+void temperaturaEnFahrenheit(float* tempFahrenheit);
+
+void temperaturaCelsiusPasandoFahrenheit(float* celsius);
+void temperaturaFahrenheitPasandoCelsius(float* fahrenheit);
+
+#endif /* UTN_H_ */

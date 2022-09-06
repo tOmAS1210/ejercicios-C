@@ -1,0 +1,86 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+//[]
+/*int main(void) {
+	setbuf(stdout,NULL);
+
+	char nombre[20];
+
+	printf("ingrese su nombre: ");
+	fflush(stdin);
+	scanf("%s", nombre);
+
+	printf("su nombre es: %s", nombre);
+
+
+	return EXIT_SUCCESS;
+}*/
+
+/*int main(void) {
+	setbuf(stdout,NULL);
+
+	int array[5];
+	int i;
+
+	for(i=0;i<5;i++)//carga secuencial
+	{
+	printf("ingrese un numero para la posicion %d: ", i);
+	scanf("%d", &array[i]);
+	}
+
+	for(i=0;i<5;i++)//muestro los datos de mi array cargado
+	{
+	printf("\nel valor de la posicion %d es: %d", i, array[i]);
+	}
+
+
+	return EXIT_SUCCESS;
+}*/
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int edad[10];
+	float sueldo[10];
+	int i;
+	float totalSueldo;
+
+	totalSueldo = 0;
+
+	for(i=0; i<10; i++)
+	{
+		//printf("\ningrese el legajo %d: ", i);
+		//scanf("%d", &legajo[i]);
+
+		printf("\ningrese la edad del empleado con el legajo en la posicion %d: ", i);
+		scanf("%d", &edad[i]);
+
+		printf("\ningrese el sueldo del empleado con el legajo en la posicion %d: ", i);
+		scanf("%f", &sueldo[i]);
+
+		totalSueldo += sueldo[i];
+	}
+
+	totalSueldo = totalSueldo/10;
+
+	for(i=0; i<10; i++)
+	{
+		printf("\nel legajo del empleado es %d, su edad es: %d y su sueldo es %f:", i,edad[i], sueldo[i]);
+	}
+	printf("el promedio de todos los sueldos es %f: ", totalSueldo);
+
+
+
+
+	return EXIT_SUCCESS;
+}

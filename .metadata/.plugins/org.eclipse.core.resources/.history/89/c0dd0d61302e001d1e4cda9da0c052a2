@@ -1,0 +1,60 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float temperaturaEnCelsius(float* tempCelsius);
+float temperaturaEnFahrenheit(float tempCelsius);
+
+float temperaturaCelsiusPasandoFahrenheit(float celsius);
+float temperaturaFahrenheitPasandoCelsius(float fahrenheit);
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	float tempCelsius;
+
+	temperaturaEnCelsius(tempCelsius);
+
+	printf("la temperatura ingresada en grados Celcius es: %f", tempCelsius);
+
+
+	return EXIT_SUCCESS;
+}
+
+float temperaturaEnCelsius(float* tempCelsius)
+{
+	float temperaturaC;
+
+	if(tempCelsius>100 || tempCelsius<0)
+	{
+	printf("ingrese una temperatura en Celsius entre 0º y 100º celsius: ");
+	scanf("%f", &tempCelsius);
+	}
+
+	temperaturaC = tempCelsius;
+
+}
+
+
+
+
+
+
+/*float temperaturaCelsiusPasandoFahrenheit(float celsius)
+{
+	float respuesta;
+
+	respuesta = (celsius*9/5) + 32;
+	return 0;
+}*/
+

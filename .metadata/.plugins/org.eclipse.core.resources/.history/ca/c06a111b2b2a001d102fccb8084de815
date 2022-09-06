@@ -1,0 +1,15 @@
+/*
+ * funciones.h
+ *
+ *  Created on: 1 sep. 2022
+ *      Author: USER
+ */
+
+#ifndef FUNCIONES_H_
+#define FUNCIONES_H_
+
+float pedir();
+void mostrarNumero(float numero);
+
+
+#endif /* FUNCIONES_H_ */

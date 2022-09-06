@@ -1,0 +1,33 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float pedir();
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+
+	pedir();
+	printf("la letra ingresada es: %f", &numero);
+
+	return EXIT_SUCCESS;
+}
+
+float pedir()
+{
+	float numero;
+	printf("ingrese una letra: ");
+	scanf("%f", &numero);
+
+	return numero;
+}

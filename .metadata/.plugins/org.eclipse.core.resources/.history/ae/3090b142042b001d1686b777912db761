@@ -1,0 +1,53 @@
+/*
+ ============================================================================
+ Name        : ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int operaciones(int num1, int num2, char opciones);
+
+int main(void) {
+	int numero1;
+	int numero2;
+	int operacion;
+	char opciones;
+
+	do{
+	printf("ingrese un numero entre 10 y 100: ");
+	scanf("%d", numero1);
+	}while(numero1<10 || numero1>100);
+
+	do{
+	printf("ingrese un numero entre 10 y 100: ");
+	scanf("%d", numero2);
+	}while(numero2<10 || numero2>100);
+
+	operacion = operaciones(numero1,numero2,opciones );
+
+	return EXIT_SUCCESS;
+}
+
+int operaciones(int num1, int num2, char opciones)
+{
+	int suma;
+	int resta;
+
+	if(opciones=='s')
+	{
+		suma = num1+num2;
+		return suma;
+	}
+	else if(opciones=='r')
+	{
+		resta = num1-num2;
+		return resta;
+	}
+
+}

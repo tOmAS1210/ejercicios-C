@@ -1,0 +1,90 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 1 sep. 2022
+ *      Author: USER
+ */
+
+int pedir()
+{
+	int numero;
+
+	do{
+	printf("ingrese un numero con decimal entre el 200 y 350: ");
+	scanf("%f", &numero);
+	}while(numero<200 || numero>350);
+
+	return numero;
+}
+
+void mostrarNumero(int numero)
+{
+	printf("el numero ingresado es: %d", numero);
+}
+
+int comprobarPar(int numero)
+{
+	if(numero%2==0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+int asignar(int num)
+{
+	do{
+	printf("ingrese un valor entre 10 y 100: ");
+	scanf("%d", &num);
+	}while(num<10.0 || num>100.0);//l
+
+	return num;
+}
+
+int realizarDescuento(float numero)
+{
+	int descuento;
+	descuento = (numero*0.90);//descuento del 10%
+
+	return descuento;
+}
+
+int realizaPromedio(int num1)
+{
+
+	int promedio;
+
+	promedio = (num1)/10;
+
+	return promedio;
+}
+
+int solicitaRetorna(int num)
+{
+	printf("ingrese un numero: ");
+	scanf("%d", &num);
+
+	return num;
+}
+
+void sumaResta(char opciones,int num1, int num2)
+{
+	int suma;
+	int resta;
+
+	scanf("%c", &opciones);//lo pongo dentro, para que al pedirlo por fuera con printf y scanf,
+	                       //se guarde la respuesta en este scanf dentro de la otra funcion;
+	if(opciones=='s')
+	{
+		suma = num1+num2;
+		printf("el resultado de la suma es: %d", suma);
+	}
+	else if(opciones=='r')
+	{
+		resta = num1-num2;
+		printf("el resultado de la resta es: %d", resta);
+	}
+}
